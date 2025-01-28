@@ -5,4 +5,10 @@ app = FastAPI()
 
 @app.post("/api/data/")
 def receive_data(watch_data: Dict[Any, Any]):
-	return {"ok": watch_data}
+    print("###### Received data ######")
+    print(watch_data)
+    print("###########################")
+    
+    return {
+        "ok": watch_data
+    }
